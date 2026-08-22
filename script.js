@@ -34,3 +34,20 @@ function dragElement(element) {
         document.onmousemove = null;
     }
 }
+
+var welcomeWindow = document.querySelector("#welcomeWindow");
+function closeWindow(element) {
+    element.style.display = "none";
+}
+function openWindow(element) {
+    element.style.display = "flex"
+}
+var welcomeWindowClose = document.querySelector("#welcomeWindowClose");
+var welcomeWindowOpen = document.querySelector("#welcomeWindowOpen");
+welcomeWindowClose.addEventListener("click", function() {
+    closeWindow(welcomeWindow);
+});
+welcomeWindowOpen.addEventListener("click", function() {
+    openWindow(welcomeWindow);
+});
+  
