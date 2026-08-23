@@ -3,17 +3,25 @@
 
   <body style="margin: 0px; background-image: url(wallpaper.jpeg); background-size: cover; font-family: Trebuchet MS, Noto Sans, sans-serif">
         <div id="topBar" class="bar"
-        style="height: 32px; border-bottom-left-radius: 16px; border-bottom-right-radius: 16px;">
-            <p id="welcomeWindowOpen"
-            style="margin-left: 16px; margin-top: 6px; font-weight: 700; cursor: pointer">
+        style="justify-content: space-between; height: 32px; border-bottom-left-radius: 16px; border-bottom-right-radius: 16px;">
+            <b id="welcomeWindowOpen"
+            style="margin-left: 16px; margin-top: 6px; cursor: pointer; width: 128px">
             isbellOS
-            </p>
-            <p style="margin-right: 16px; margin-top: 6px; float: right"
-            id="timeElement"></p>
+            </b>
+            <p id="timeElement"
+            style="margin-right: 16px; margin-top: 6px; width: 256px; text-align: right;"></p>
         </div>
 
         <div id="bottomBar" class="bar"
-        style="bottom: 0%; height: 64px; border-top-left-radius: 16px; border-top-right-radius: 16px;">
+        style="justify-content: space-around; bottom: 0%; height: 64px; border-top-left-radius: 16px; border-top-right-radius: 16px;">
+        </div>
+
+        <div id="desktopApps" style="padding-top: 64px; padding-left: 16px;">
+            <div id="tsaWindowOpen" class="desktopIcon selected">
+                <img src="patsa_logo.png"
+                style="width: 64px">
+                <p class="desktopText">TSA</p>
+            </div>
         </div>
 
         <div id="welcomeWindow" class="window">
@@ -21,7 +29,17 @@
                 <div id="welcomeWindowClose" class="closeButton"></div>
             </div>
             <h1>Welcome to isbellOS!</h1>
-            <p>Here you can find my projects and anything else I want to show off</p>
+            <p>Here you can find my projects and anything else I want to show off.</p>
+            <p>To close this window: click the red dot in the corner.</p>
+            <p>To open it again, click <b>isbellOS</b> in the top left.</p>
+            <p>You can also drag the window around with its header.</p>
+        </div>
+
+        <div id="tsaWindow" class="window" style="display: none">
+            <div id="tsaWindowHeader" class="windowHeader">
+                <div id="tsaWindowClose" class="closeButton"></div>
+            </div>
+            <h1>TSA</h1>
         </div>
 
         <script src="script.js"></script>

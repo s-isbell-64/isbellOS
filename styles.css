@@ -26,18 +26,37 @@
 .bar {
     position: absolute;
     width: 100%;
-    display: flex; justify-content: space-between;
+    display: flex;
     background-color: rgba(240, 248, 255, 0.8);
     color: #25242a;
     border: solid 2px #25242a;
 }
 
+.desktopIcon {
+    text-align: center;
+    filter: drop-shadow(0 0 8px black);
+    width: fit-content;
+    padding: 16px;
+    cursor: pointer;
+}
+
+.desktopText {
+    color: #f0f8ff;
+    margin: 0px;
+}
+
 h1 {
     color: #25242a;
+    font-size: 32px;
     width: 100%;
 }
 
 p {
     color: #25242a;
+    font-size: 16px;
     width: 100%;
+}
+
+b {
+    font-weight: 700;
 }
