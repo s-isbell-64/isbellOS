@@ -2,40 +2,30 @@
 <html>
 
   <body style="margin: 0px; background-image: url(wallpaper.jpeg); background-size: cover; font-family: Trebuchet MS, Noto Sans, sans-serif">
-        <div id="topBar"
-        style="position: absolute; width: 100%; height: 32px; display: flex; justify-content: space-between;
-        background-color: rgba(240, 248, 255, 0.8); color: #25242a;
-        border: solid; border-color: #25242a; border-width: 2px; border-bottom-left-radius: 16px; border-bottom-right-radius: 16px;">
+        <div id="topBar" class="bar"
+        style="height: 32px; border-bottom-left-radius: 16px; border-bottom-right-radius: 16px;">
             <p id="welcomeWindowOpen"
             style="margin-left: 16px; margin-top: 6px; font-weight: 700; cursor: pointer">
             isbellOS
             </p>
-            <p style="margin-right: 16px;  margin-top: 6px;"
-            id="timeElement">
-            Current Time
-            </p>
+            <p style="margin-right: 16px; margin-top: 6px; float: right"
+            id="timeElement"></p>
         </div>
 
-        <div id="bottomBar"
-        style="position: absolute; bottom: 0%; width: 100%;  height: 64px; display: flex; justify-content: space-between;
-        background-color: rgba(240, 248, 255, 0.8); color: #25242a;
-        border: solid; border-color: #25242a; border-width: 2px; border-top-left-radius: 16px; border-top-right-radius: 16px;">
+        <div id="bottomBar" class="bar"
+        style="bottom: 0%; height: 64px; border-top-left-radius: 16px; border-top-right-radius: 16px;">
         </div>
 
-        <div id="welcomeWindow"
-        style="display: flex; flex-direction: column; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 16px;
-        border: solid; border-color:#25242a; border-width: 2px; width: 512px; height: 512px; border-radius: 16px; background-color: #f0f8ff">
-            <div id="welcomeWindowHeader"
-            style="width: 100%; align-items: center; justify-content: space-between; height: 32px; cursor: grab">
-                <div id="welcomeWindowClose"
-                style="cursor: pointer; width: 16px; height: 16px; border-radius: 16px;
-                background-color: #e6422c; border: solid 2px rgba(255, 255, 255, 0.25);"></div>
+        <div id="welcomeWindow" class="window">
+            <div id="welcomeWindowHeader" class="windowHeader">
+                <div id="welcomeWindowClose" class="closeButton"></div>
             </div>
-            <h1 style="color: #25242a; width: 100%">Welcome to isbellOS!</h1>
-            <p style="color: #25242a; width: 100%">Here you can find my projects and anything else I want to show off</p>
+            <h1>Welcome to isbellOS!</h1>
+            <p>Here you can find my projects and anything else I want to show off</p>
         </div>
 
         <script src="script.js"></script>
+        <link rel="stylesheet" type="text/css" href="styles.css" />
   </body>
 
 </html>
