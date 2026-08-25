@@ -1,7 +1,5 @@
 setInterval(function() {document.querySelector("#timeElement").innerHTML = new Date().toLocaleString()}, 1000);
 
-/*dragElement(document.querySelector("#welcomeWindow"));
-dragElement(document.querySelector("#tsaWindow"));*/
 function dragElement(element) {
     var initialX = 0;
     var initialY = 0;
@@ -49,6 +47,7 @@ function setupWindow(windowName) {
     addWindowTapHandling(window);
     dragElement(window);
 }
+var topBar = document.querySelector("#topBar");
 var welcomeWindow = document.querySelector("#welcomeWindow");
 var tsaWindow = document.querySelector("#tsaWindow");
 setupWindow("welcomeWindow");
@@ -61,23 +60,7 @@ function openWindow(element) {
     biggestIndex++;
     element.style.zIndex = biggestIndex;
     topBar.style.zIndex = biggestIndex + 1;
-}/*
-var welcomeWindowClose = document.querySelector("#welcomeWindowClose");
-var welcomeWindowOpen = document.querySelector("#welcomeWindowOpen");
-var tsaWindowClose = document.querySelector("#tsaWindowClose");
-var tsaWindowOpen = document.querySelector("#tsaIcon");
-welcomeWindowClose.addEventListener("click", function() {
-    closeWindow(welcomeWindow);
-});
-welcomeWindowOpen.addEventListener("click", function() {
-    openWindow(welcomeWindow);
-});
-tsaWindowClose.addEventListener("click", function() {
-    closeWindow(tsaWindow);
-});
-tsaWindowOpen.addEventListener("click", function() {
-    openWindow(tsaWindow);
-});*/
+}
 
 var selectedIcon = undefined;
 function selectIcon(element) {
@@ -109,4 +92,52 @@ function handleWindowTap(element) {
     topBar.style.zIndex = biggestIndex + 1;
     deselectIcon(selectedIcon)
 }
-var topBar = document.querySelector("#topBar");
+
+var tsaContent = [{
+        title: "Data Science 2026",
+        content: `
+            <h2>Data Science and Analytics 2026</h2>
+            <p>Project Description</p>`
+    },
+    {
+        title: "Test",
+        content: `
+            <h2>Test Content</h2>
+            <p>Description</p>`
+    },
+    {
+        title: "Test 2",
+        content: `
+            <h2>Test 2</h2>
+            <p>a</p>
+            <p>b</p>
+            <p>c</c>
+            <p>d</p>
+            <p>e<br><br><br><br><br><br><br><br><br><br><br>f<br><br><br><br><br><br>g</p>`
+    }
+]
+function setTSAContent(index) {
+    var content = document.querySelector("#tsaContent");
+    content.innerHTML = tsaContent[index].content;
+}
+setTSAContent(0);
+function addToTSASidebar(index) {
+    var sidebar = document.querySelector("#tsaSidebar");
+    var entry = tsaContent[index];
+    var newDiv = document.createElement("div");
+    newDiv.innerHTML = `
+        <p style="background-color: #c1c1c1;
+        border-radius: 16px;
+        padding-left: 8px;
+        padding-top: 4px;
+        padding-bottom: 4px">
+            ${entry.title}    
+        </p>`
+    newDiv.addEventListener("click", function () {
+        setTSAContent(index);
+    })
+    sidebar.appendChild(newDiv);
+}
+for (let i = 0; i < tsaContent.length; i++) {
+    addToTSASidebar(i);
+}

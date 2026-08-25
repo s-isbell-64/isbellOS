@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-  <body style="margin: 0px; background-image: url(wallpaper.jpeg); background-size: cover; font-family: Trebuchet MS, Noto Sans, sans-serif">
+  <body style="margin: 0px; background-image: url(assets/wallpaper.jpeg); background-size: cover; font-family: Tahoma, sans-serif">
         <div id="topBar" class="bar"
         style="justify-content: space-between; height: 32px; border-bottom-left-radius: 16px; border-bottom-right-radius: 16px;">
             <b id="welcomeWindowOpen"
@@ -13,18 +13,19 @@
         </div>
 
         <div id="bottomBar" class="bar"
-        style="justify-content: space-around; bottom: 0%; height: 64px; border-top-left-radius: 16px; border-top-right-radius: 16px;">
+        style="justify-content: space-evenly; bottom: 0%; height: 64px; border-top-left-radius: 16px; border-top-right-radius: 16px;">
         </div>
 
         <div id="desktopApps" style="padding-top: 64px; padding-left: 16px;">
             <div id="tsaWindowOpen" class="desktopIcon selected">
-                <img src="patsa_logo.png"
+                <img src="assets/patsa_logo.png"
                 style="width: 64px">
                 <p class="desktopText">TSA</p>
             </div>
         </div>
 
-        <div id="welcomeWindow" class="window">
+        <div id="welcomeWindow" class="window"
+        style="width: 512px">
             <div id="welcomeWindowHeader" class="windowHeader">
                 <div id="welcomeWindowClose" class="closeButton"></div>
             </div>
@@ -35,11 +36,19 @@
             <p>You can also drag the window around with its header.</p>
         </div>
 
-        <div id="tsaWindow" class="window" style="display: none">
+        <div id="tsaWindow" class="window"
+        style="display: none; width: 768px; height: 512px">
             <div id="tsaWindowHeader" class="windowHeader">
                 <div id="tsaWindowClose" class="closeButton"></div>
+                <h1>TSA</h1>
             </div>
-            <h1>TSA</h1>
+            <div style="display: flex; flex-direction: row; justify-content: space-between;
+            gap: 16px; margin-top: 16px; margin-bottom: 16px;">
+                <div id="tsaSidebar" class="sidebar">
+                </div>
+                <div id="tsaContent" class="innerWindow">  
+                </div>
+            </div>
         </div>
 
         <script src="script.js"></script>
