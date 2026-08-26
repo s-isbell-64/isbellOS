@@ -16,9 +16,9 @@ function dragElement(element) {
         initialX = e.clientX;
         initialY = e.clientY;
         document.onmouseup = stopDragging;
-        document.onmousemove = dragElement;
+        document.onmousemove = elementDrag;
     }
-    function dragElement(e) {
+    function elementDrag(e) {
         e = e || window.event;
         e.preventDefault();
         currentX = initialX - e.clientX;
@@ -126,11 +126,7 @@ function addToTSASidebar(index) {
     var entry = tsaContent[index];
     var newDiv = document.createElement("div");
     newDiv.innerHTML = `
-        <p style="background-color: #c1c1c1;
-        border-radius: 16px;
-        padding-left: 8px;
-        padding-top: 4px;
-        padding-bottom: 4px">
+        <p class="sidebarItem">
             ${entry.title}    
         </p>`
     newDiv.addEventListener("click", function () {

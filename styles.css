@@ -49,11 +49,17 @@
 }
 
 .sidebarItem {
+    transition: 0.2s;
     background-color: #c1c1c1;
     border-radius: 16px;
     padding-left: 8px;
     padding-top: 4px;
     padding-bottom: 4px;
+    cursor: pointer;
+}
+.sidebarItem:hover {
+    transition: 0.2s;
+    background-color: #dfdfdf;
 }
 
 .bar {
@@ -77,6 +83,7 @@
 .desktopText {
     color: #f0f8ff;
     margin: 0px;
+    text-shadow: 2px 2px black;
 }
 
 h1 {
